@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "ckeditor-angular"
+  "defaultProject": "ckeditor-angular",
+  "cli": {
+    "analytics": false
+  }
 }
