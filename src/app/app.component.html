@@ -1,10 +1,19 @@
 
-<ckeditor [editor]="Editor" [config]="config" [(ngModel)]="htmlData"></ckeditor>
+<div class="row mt-3">
+  <div class="col-6 offset-3">
+    <ckeditor [editor]="Editor" [config]="config" (ready)="onReady($event)" [(ngModel)]="htmlData"></ckeditor>
+  </div>
+</div>
+
 <br>
 
-<div class="ck ck-editor__main">
-  <div
-    class="ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline ck-blurred"
-    [innerHtml]="htmlData | sanitizeHtml">
+<div class="row">
+  <div class="col-6 offset-3">
+    <div class="ck ck-editor__main">
+      <div
+        class="ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline ck-blurred"
+        [innerHtml]="htmlData | sanitizeHtml">
+      </div>
+    </div>
   </div>
 </div>
